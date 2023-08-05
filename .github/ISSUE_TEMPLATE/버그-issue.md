@@ -1,5 +1,5 @@
 ---
-name: '버그 보고서 '
+name: 버그 Issue
 about: '이 이슈 탬플릿은 버그 및 에러 보고를 위해 선택되는 탬플릿입니다. '
 title: "[BUG]"
 labels: "버그 및 에러 \U0001F41E"
