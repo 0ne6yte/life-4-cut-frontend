@@ -1,6 +1,6 @@
 ---
 name: 구현 Issue
-about: 이 이슈는 Feature와 관련된 구현의 전반적인 부분을 다루는 이슈입니다.
+about: 이 이슈는 Feature와 관련된 구현의 전반적인 부분을 다루는 탬플릿입니다.
 title: "[FEAT]"
 labels: ''
 assignees: ''
