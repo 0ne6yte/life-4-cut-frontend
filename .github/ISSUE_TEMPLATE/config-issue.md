@@ -1,6 +1,6 @@
 ---
 name: config issue
-about: docs / chore / fix / perf 등 구현/버그를 제외한 나머지 부분을 작성할 때 사용하는 탬플릿입니다.
+about: 환경 설정과 관련된 부분을 다루는 이슈입니다.
 title: ''
 labels: 'Config \U0002699'
 assignees: ''
