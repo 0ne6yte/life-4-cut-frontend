@@ -1,8 +1,8 @@
 ---
-name: 구현 Issue
+name: feature issue
 about: 이 이슈는 Feature와 관련된 구현의 전반적인 부분을 다루는 탬플릿입니다.
 title: ''
-labels: ''
+labels: 'Feature \U0001F3A1'
 assignees: ''
 ---
 
