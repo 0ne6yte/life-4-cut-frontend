@@ -22,6 +22,7 @@
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@vitejs/plugin-react": "^4.0.3",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.0.1",
@@ -36,7 +37,8 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "^3.0.1",
-    "typescript": "*"
+    "typescript": "*",
+    "vite": "^4.4.5"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

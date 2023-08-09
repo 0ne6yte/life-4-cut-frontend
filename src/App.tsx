@@ -1,11 +1,13 @@
-import {Route, Routes} from "react-router-dom";
-import LoginPage from "./domain/login";
+import { Route, Routes } from 'react-router-dom';
+import LoginPage from '../src/domain/login';
 
 function App() {
-    return (
-        <Routes>
-            <Route path={"/"} element={<LoginPage/>}/>
-            <Route path={"/login"} element={<LoginPage/>}/>
-        </Routes>
-    )
+  return (
+    <Routes>
+      <Route path={'/'} element={<LoginPage />} />
+      <Route path={'/login'} element={<LoginPage />} />
+    </Routes>
+  );
 }
+
+export default App;
