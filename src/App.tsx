@@ -1,5 +1,13 @@
-import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import LoginPage from '../src/domain/login';
 
-const App = () => <div>hi</div>;
+function App() {
+  return (
+    <Routes>
+      <Route path={'/'} element={<LoginPage />} />
+      <Route path={'/login'} element={<LoginPage />} />
+    </Routes>
+  );
+}
 
 export default App;
