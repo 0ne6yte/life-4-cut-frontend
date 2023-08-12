@@ -96,5 +96,5 @@
 - committizen을 사용하여 커밋 메시지를 작성합니다. 형식: [type]: [subject]
 - 실행방법
 
-  `yarn cz` 
+  `yarn commit` 
 
