@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.tsx",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "keywords": [],
   "author": "",
