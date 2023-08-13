@@ -23,14 +23,14 @@ export const WithoutText: Story = {
 export const WithText: Story = {
   args: {
     label: 'With text',
-    value: 'value',
+    defaultValue: 'value',
   },
 };
 
 export const Error: Story = {
   args: {
     label: 'Error',
-    value: '엥?',
+    defaultValue: '엥?',
     errorMessage: '삐빅. 이미 존재하는 앨범명 ㅅㄱ',
     isError: true,
   },
@@ -39,7 +39,7 @@ export const Error: Story = {
 export const Checked: Story = {
   args: {
     label: 'Checked',
-    value: 'value',
-    checked: true,
+    defaultValue: 'value',
+    isChecked: true,
   },
 };

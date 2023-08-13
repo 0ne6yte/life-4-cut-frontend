@@ -1,23 +1,23 @@
 import React from 'react';
 import './input.css';
-
+import { ReactComponent as CheckMark } from '../../../assets/check-mark.svg';
+import { ReactComponent as ErrorMark } from '../../../assets/error-mark.svg';
 interface InputProps {
   label?: string;
-  value?: string;
+  defaultValue?: string;
   errorMessage?: string;
   isError?: boolean;
-  checked?: boolean;
+  isChecked?: boolean;
 }
 
-export const Input = ({ label, value, errorMessage, isError, checked, ...props }: InputProps) => {
+export const Input = ({ label, defaultValue, errorMessage, isError, isChecked, ...props }: InputProps) => {
   return (
     <>
-      <input
-        placeholder={label}
-        {...props}
-        value={value}
-        className={`input ${isError === true ? 'input--error' : ''}`}
-      />
+      <div className={`input ${isError === true ? 'input--error' : ''}`}>
+        <input placeholder={label} {...props} defaultValue={defaultValue} />
+        {isChecked === true && <CheckMark />}
+        {isError === true && <ErrorMark />}
+      </div>
       {isError === true && <div className="input--error-message">{errorMessage}</div>}
     </>
   );
