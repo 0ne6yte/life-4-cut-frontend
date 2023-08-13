@@ -1,8 +1,24 @@
 # Life 4 Cut FE
 
-# 디렉토리 구조
+## Run & Build
 
-## 구조 Tree
+| description     | command        | port |
+|-----------------|----------------|------|
+| 개발모드 실행         | `yarn dev`     | 5173 |
+| 프로덕션 빌드 preview | `yarn preview` | 4173 |
+| 빌드              | `yarn build`   |      |
+
+### Storybook
+프로젝트에서 사용되는 컴포넌트를 확인할 수 있습니다.
+
+| description | command                | port   |
+|-------------|------------------------|--------|
+| 스토리북 실행     | `yarn storybook`       | 6006   |
+| 스토리북 빌드     | `yarn build-storybook` |        |
+
+
+
+## 디렉토리 구조
 
 ``` text
 📦src
@@ -38,8 +54,6 @@
 
 ```
 
-## 구조 설명
-
 ### domain
 
 해당 프로젝트는 도메인 단위로 분류하여 관리합니다. </br>
@@ -59,14 +73,6 @@
 - album - list: 앨범 목록보기에 해당됩니다.
 - album - [id]: (아직 미등록입니다.) 피그마 기준 사진 목록 보기에 해당됩니다.
 - photo - register: 사진 추가에 해당됩니다.
-
-## 참고
-
-- [DDD와 MSA 기반으로 좋은 서비스 개발하기](https://helloworld.kurly.com/blog/ddd-msa-service-development/) - Kurly Tech Blog
-- [Domain-Driven Design in Nuxt Apps](https://vueschool.io/articles/vuejs-tutorials/domain-driven-design-in-nuxt-apps/) -
-  vueschool.io
-- [프론트엔드, DDD 한숟갈 얹기](https://handhand.tistory.com/256) - owen.dev.log
-- [프론트엔드 DDD를 만나다](https://www.youtube.com/watch?v=FeDBlSBPUz8) - FECONF 2022
 
 ### Code formatting
 
