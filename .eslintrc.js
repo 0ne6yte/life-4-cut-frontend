@@ -35,5 +35,5 @@ module.exports = {
     'no-restricted-globals': 'off', // window, document, fetch 등의 글로벌 변수 사용 허용
     curly: ['error', 'all'], // 블록 구문 사용 권장
   },
-  ignorePatterns: ['.eslintrc.js', 'src/stories/**/*'],
+  ignorePatterns: ['.eslintrc.js'],
 };
