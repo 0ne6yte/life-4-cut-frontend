@@ -1,5 +1,5 @@
-const LoginPage = () => {
-  return <p>세상에 이런 폰트가 나오다니 천재인듯</p>;
+const Login = () => {
+  return <h1>로그인 페이지</h1>;
 };
 
-export default LoginPage;
+export default Login;
