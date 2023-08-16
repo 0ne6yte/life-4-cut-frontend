@@ -8,9 +8,10 @@ module.exports = {
       white: '#FFFFFF',
       primary: '#00A3FF',
       red: '#FF6F6F',
-      highlight: {
-        light: 'gradient-to-r from-blue-500 to-purple-600',
-        dark: 'gradient-to-r from-blue-900 to-purple-800',
+      gradient: {
+        lightblue: '#516DFE',
+        purple: '#8A20BC',
+        darkblue: '#0300A4',
       },
       grey: {
         white: '#F6F6F6',
@@ -19,6 +20,9 @@ module.exports = {
         buttontext: '#696969',
       },
     },
+    gradientColorStops: (theme) => ({
+      ...theme('colors'),
+    }),
   },
   plugins: [],
 };
