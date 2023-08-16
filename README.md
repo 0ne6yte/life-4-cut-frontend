@@ -60,14 +60,6 @@
 - album - [id]: (아직 미등록입니다.) 피그마 기준 사진 목록 보기에 해당됩니다.
 - photo - register: 사진 추가에 해당됩니다.
 
-## 참고
-
-- [DDD와 MSA 기반으로 좋은 서비스 개발하기](https://helloworld.kurly.com/blog/ddd-msa-service-development/) - Kurly Tech Blog
-- [Domain-Driven Design in Nuxt Apps](https://vueschool.io/articles/vuejs-tutorials/domain-driven-design-in-nuxt-apps/) -
-  vueschool.io
-- [프론트엔드, DDD 한숟갈 얹기](https://handhand.tistory.com/256) - owen.dev.log
-- [프론트엔드 DDD를 만나다](https://www.youtube.com/watch?v=FeDBlSBPUz8) - FECONF 2022
-
 ### Code formatting
 
 - ESLint

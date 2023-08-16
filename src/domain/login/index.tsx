@@ -1,5 +1,5 @@
 const LoginPage = () => {
-  return <div className={'bg-highlight-light text-grey-buttontext'}>login</div>;
+  return <div>login</div>;
 };
 
 export default LoginPage;
