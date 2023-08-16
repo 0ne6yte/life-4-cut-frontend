@@ -1,7 +1,7 @@
 import React from 'react';
 import './input.css';
-import { ReactComponent as CheckMark } from '../../../assets/check-mark.svg';
-import { ReactComponent as ErrorMark } from '../../../assets/error-mark.svg';
+import { ReactComponent as CheckMark } from '@/assets/check-mark.svg';
+import { ReactComponent as ErrorMark } from '@/assets/error-mark.svg';
 interface InputProps {
   label?: string;
   defaultValue?: string;
