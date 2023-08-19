@@ -1,0 +1,37 @@
+.input{
+  padding: 13px;
+  border: 1px solid #C9C9C9;
+  border-radius: 12px;
+  width: 100%;
+  min-width:336px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.input--error {
+  border-color: #FF6F6F;
+}
+
+.input--error > input {
+  color: #FF6F6F;
+}
+
+.input--error-message {
+  color: #FF6F6F;
+  font-size: 9px;
+  font-weight: bold;
+  margin: 4px 0 0 12px;
+}
+
+.input > input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.input > input::placeholder {
+  color: #C9C9C9;
+}
