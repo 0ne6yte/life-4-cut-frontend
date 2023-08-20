@@ -1,4 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
+
+import AlbumRouters from './routers/AlbumRouters';
+import PhotoRouters from './routers/PhotoRouters';
+
 import Login from './domain/Login';
 import MyPage from './domain/MyPage';
 import AlbumList from './domain/Album/AlbumList';
@@ -13,11 +17,15 @@ function App() {
       <Route path={'/'} element={<Login />} />
       <Route path={'/login'} element={<Login />} />
       <Route path={'/mypage'} element={<MyPage />} />
-      <Route path={'/album'} element={<AlbumList />} />
-      <Route path={'/album/edit'} element={<EditAlbum />} />
-      <Route path={'/album/register'} element={<RegisterAlbum />} />
-      <Route path={'/photo'} element={<PhotoList />} />
-      <Route path={'/photo/register'} element={<RegisterPhoto />} />
+      <Route path={'/album'} element={<AlbumRouters />}>
+        <Route index element={<AlbumList />} />
+        <Route path={'edit'} element={<EditAlbum />} />
+        <Route path={'register'} element={<RegisterAlbum />} />
+      </Route>
+      <Route path={'/photo'} element={<PhotoRouters />}>
+        <Route index element={<PhotoList />} />
+        <Route path={'register'} element={<RegisterPhoto />} />
+      </Route>
     </Routes>
   );
 }
