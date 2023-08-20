@@ -2,7 +2,7 @@
   "name": "life-4-cut-frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.tsx",
+  "main": "src/main.tsx",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -52,5 +52,6 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  }
+  },
+  "packageManager": "yarn@3.6.1"
 }
