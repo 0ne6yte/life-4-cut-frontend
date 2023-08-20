@@ -2,25 +2,24 @@
 
 ## Run & Build
 
-| description     | command        | port |
-|-----------------|----------------|------|
+| description           | command        | port |
+| --------------------- | -------------- | ---- |
 | 개발모드 실행         | `yarn dev`     | 5173 |
 | 프로덕션 빌드 preview | `yarn preview` | 4173 |
-| 빌드              | `yarn build`   |      |
+| 빌드                  | `yarn build`   |      |
 
 ### Storybook
+
 프로젝트에서 사용되는 컴포넌트를 확인할 수 있습니다.
 
-| description | command                | port   |
-|-------------|------------------------|--------|
-| 스토리북 실행     | `yarn storybook`       | 6006   |
-| 스토리북 빌드     | `yarn build-storybook` |        |
-
-
+| description   | command                | port |
+| ------------- | ---------------------- | ---- |
+| 스토리북 실행 | `yarn storybook`       | 6006 |
+| 스토리북 빌드 | `yarn build-storybook` |      |
 
 ## 디렉토리 구조
 
-``` text
+```text
 📦src
  ┣ 📂apis
  ┣ 📂assets
@@ -77,30 +76,29 @@
 ### Code formatting
 
 - ESLint
-    - `.eslintrc.js`에 작성된 설정을 따릅니다.
-    - `yarn eslint --init` 로 초기화된 설정파일(`.eslintrc.js`)을 사용합니다.
-    - 선택 옵션
-        - To check syntax, find problems, and enforce code style
-        - JavaScript modules (import/export)
-        - React
-        - TypeScript
-        - run in Browser
-        - Use a popular style guide
-        - [standard-with-typescript](https://github.com/standard/eslint-config-standard-with-typescript)
-        - config file format - JavaScript
-    -
+  - `.eslintrc.js`에 작성된 설정을 따릅니다.
+  - `yarn eslint --init` 로 초기화된 설정파일(`.eslintrc.js`)을 사용합니다.
+  - 선택 옵션
+    - To check syntax, find problems, and enforce code style
+    - JavaScript modules (import/export)
+    - React
+    - TypeScript
+    - run in Browser
+    - Use a popular style guide
+    - [standard-with-typescript](https://github.com/standard/eslint-config-standard-with-typescript)
+    - config file format - JavaScript
+  -
 - Prettier
-    - `.prettierrc.js`에 작성된 설정을 따릅니다.
-    - `eslint-plugin-simple-import-sort`를 사용하여 import 순서를 정합니다.
-        - importOrder: ['<THIRD_PARTY_MODULES>', 'react', '^[@/]', '^[./]'],
+  - `.prettierrc.js`에 작성된 설정을 따릅니다.
+  - `eslint-plugin-simple-import-sort`를 사용하여 import 순서를 정합니다.
+    - importOrder: ['<THIRD_PARTY_MODULES>', 'react', '^[@/]', '^[./]'],
 - Husky + Lint-staged
-    - 커밋전 eslint & prettier를 실행하는 pre-commit hook을 설정합니다.
-    - git hook 활성화를 위해 project 최초 세팅시 `yarn prepare` 을 실행해야합니다.
+  - 커밋전 eslint & prettier를 실행하는 pre-commit hook을 설정합니다.
+  - git hook 활성화를 위해 project 최초 세팅시 `yarn prepare` 을 실행해야합니다.
 
 ### Commit message convention
 
 - committizen을 사용하여 커밋 메시지를 작성합니다. 형식: [type]: [subject]
 - 실행방법
 
-  `yarn commit` 
-
+  `yarn commit`
