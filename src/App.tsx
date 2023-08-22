@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import DefaultMobileLayout from './domain/_common/layouts/DefaultMobileLayout';
-import './index.css';
 
 import AlbumRouters from './routers/AlbumRouters';
 import PhotoRouters from './routers/PhotoRouters';
