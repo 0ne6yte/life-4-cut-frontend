@@ -22,7 +22,7 @@ module.exports = {
         darkblue: '#0300A4',
       },
       grey: {
-        white: '#F6F6F6',
+        whitegray: '#F6F6F6',
         background: '#ECECEC',
         placeholder: '#c9c9c9',
         buttontext: '#696969',
@@ -83,6 +83,10 @@ module.exports = {
     },
     fontFamily: {
       pretendard: ['var(--font-pretendard)'],
+    },
+    backgroundImage: {
+      'highlight-gradient': 'var(--highlight, linear-gradient(77deg, #1914FF 0%, #A336F9 100%))',
+      'highlight-gradient-dark': 'var(--highlight-touch, linear-gradient(77deg, #0300A4 0%, #8C32D2 100%))',
     },
   },
   plugins: [],
