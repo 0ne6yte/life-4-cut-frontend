@@ -1,9 +1,13 @@
-import { Outlet } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
+import PhotoList from '@/domain/Photo/PhotoList';
+import RegisterPhoto from '@/domain/Photo/RegisterPhoto';
 
 function PhotoRouters() {
   return (
     <>
-      <Outlet />
+      <Route index element={<PhotoList />} />
+      <Route path={'register'} element={<RegisterPhoto />} />
     </>
   );
 }
