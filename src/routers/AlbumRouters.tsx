@@ -1,15 +1,9 @@
-import { Route } from 'react-router-dom';
-
-import AlbumList from '@/domain/Album/AlbumList';
-import EditAlbum from '@/domain/Album/EditAlbum';
-import RegisterAlbum from '@/domain/Album/RegisterAlbum';
+import { Outlet } from 'react-router-dom';
 
 function AlbumRouters() {
   return (
     <>
-      <Route index element={<AlbumList />} />
-      <Route path={'edit'} element={<EditAlbum />} />
-      <Route path={'register'} element={<RegisterAlbum />} />
+      <Outlet />
     </>
   );
 }
