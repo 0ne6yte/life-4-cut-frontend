@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import AlbumList from '@/domain/Album/AlbumList';
 import EditAlbum from '@/domain/Album/EditAlbum';
@@ -10,6 +10,7 @@ function AlbumRouters() {
       <Route index element={<AlbumList />} />
       <Route path={'edit'} element={<EditAlbum />} />
       <Route path={'register'} element={<RegisterAlbum />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }
