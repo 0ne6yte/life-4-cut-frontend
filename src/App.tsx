@@ -11,7 +11,7 @@ function App() {
     <Routes>
       <Route path={'/'} element={<Login />} />
       <Route path={'/login'} element={<Login />} />
-      <Route path={'/mypage'} element={<MyPage />} />
+      <Route path={'/my-page'} element={<MyPage />} />
       <Route path={'/album/*'} element={<AlbumRouters />} />
       <Route path={'/photo/*'} element={<PhotoRouters />} />
     </Routes>
