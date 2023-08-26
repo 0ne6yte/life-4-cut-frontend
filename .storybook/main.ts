@@ -12,5 +12,3 @@ const config: StorybookConfig = {
 };
 
 export default config;
-
-// npx chromatic --project-token=chpt_aae3d84be54fe63
