@@ -4,15 +4,20 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      black: '#000000',
+      black: {
+        DEFAULT: '#000000',
+        80: 'rgba(0, 0, 0, 0.80)',
+        40: 'rgba(0, 0, 0, 0.40)',
+        20: 'rgba(0, 0, 0, 0.20)',
+      },
       white: '#FFFFFF',
       primary: {
-        disabled: '#00A3FF',
+        disabled: 'rgba(0, 163, 255, 0.40)',
         default: '#00A3FF',
         touch: '#0085CF',
       },
       red: {
-        disabled: '#FF8585',
+        disabled: 'rgba(255, 133, 133, 0.40)',
         default: '#FF6F6F',
         touch: '#E13838',
       },
