@@ -11,7 +11,8 @@
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "commit": "cz"
+    "commit": "cz",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +31,7 @@
     "@storybook/addon-links": "^7.2.3",
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/blocks": "^7.2.3",
+    "@storybook/builder-vite": "^7.3.2",
     "@storybook/react": "^7.2.3",
     "@storybook/react-vite": "^7.2.3",
     "@storybook/testing-library": "^0.2.0",
@@ -37,6 +39,7 @@
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@vitejs/plugin-react": "^4.0.3",
+    "chromatic": "^6.24.1",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.0.1",
@@ -69,5 +72,7 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "packageManager": "yarn@3.6.1"
+  "packageManager": "yarn@3.6.1",
+  "readme": "ERROR: No README data found!",
+  "_id": "life-4-cut-frontend@1.0.0"
 }
