@@ -1,5 +1,7 @@
 # Life 4 Cut FE
 
+## 사이트 URL: https://life-4-cut.netlify.app/
+
 ## Run & Build
 
 | description           | command        | port |
