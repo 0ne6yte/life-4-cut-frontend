@@ -1,5 +1,19 @@
-* {
-  font-family: ‘Pretendard’;
-  font-size: 16px;
-  font-weight: 300;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        font-family: ‘Pretendard’;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    body {
+        min-height: 100vh;
+        width: 100vw;
+        min-width: 350px;
+        position: relative;
+        height: 100dvh;
+    }
 }
