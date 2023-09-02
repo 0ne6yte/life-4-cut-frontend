@@ -76,7 +76,7 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "yarn@1.22.19",
   "readme": "ERROR: No README data found!",
   "_id": "life-4-cut-frontend@1.0.0"
 }
