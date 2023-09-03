@@ -5,7 +5,7 @@ import pxToRem from '@/utils/pxToRem';
 interface AvatarIconProps {
   image?: ReactNode;
   pxWidth?: number;
-ㅂ  pxHeight?: number;
+  pxHeight?: number;
 }
 
 interface AvatarListProps extends AvatarIconProps {
@@ -13,8 +13,12 @@ interface AvatarListProps extends AvatarIconProps {
 }
 
 export const Avatar = ({ image, pxWidth = 20, pxHeight = 20 }: AvatarIconProps) => {
+  const createRandomColor = () => {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    return `#${randomColor}`;
+  };
   return (
-    <div className={`w-[${pxToRem(pxWidth)}] h-[${pxToRem(pxHeight)}]`}>
+    <div className={`w-[${pxToRem(pxWidth)}] h-[${pxToRem(pxHeight)}] bg-[${createRandomColor()}]`}>
       {image !== undefined ? image : <AvatarIcon />}
     </div>
   );
