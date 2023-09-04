@@ -1,8 +1,8 @@
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
-import AlbumList from '@/domain/Album/AlbumList';
-import EditAlbum from '@/domain/Album/EditAlbum';
-import RegisterAlbum from '@/domain/Album/RegisterAlbum';
+import AlbumList from '@/domain/album/AlbumList';
+import EditAlbum from '@/domain/album/EditAlbum';
+import RegisterAlbum from '@/domain/album/RegisterAlbum';
 
 function AlbumRouters() {
   return (
