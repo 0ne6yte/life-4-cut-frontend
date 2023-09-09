@@ -51,37 +51,37 @@ module.exports = {
     },
     fontSize: {
       headline1: [
-        '24px',
+        '1.5rem',
         {
-          lineHeight: '33.6px',
+          lineHeight: '2.1rem',
           fontWeight: '700',
         },
       ],
       headline2: [
-        '20px',
+        '1.25rem',
         {
-          lineHeight: '28px',
+          lineHeight: '1.75rem',
           fontWeight: '700',
         },
       ],
       headline3: [
-        '18px',
+        '1.125rem',
         {
-          lineHeight: '25.2px',
+          lineHeight: '1.575rem',
           fontWeight: '700',
         },
       ],
       body13: [
-        '13px',
+        '0.813rem',
         {
-          lineHeight: '18.2px',
+          lineHeight: '1.138rem',
           fontWeight: '700',
         },
       ],
       body8: [
-        '8px',
+        '0.5rem',
         {
-          lineHeight: '11.2px',
+          lineHeight: '0.7rem',
           fontWeight: '500',
         },
       ],
