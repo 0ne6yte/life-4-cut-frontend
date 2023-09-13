@@ -5,8 +5,8 @@ import './button.css';
 interface ButtonProps {
   status: 'default' | 'disabled';
   type: 'normal' | 'text' | 'primary' | 'large';
-  textContent: string;
   onClickHandler: React.MouseEventHandler<HTMLButtonElement>;
+  children?: React.ReactNode;
 }
 
 const buttonStyle = {
@@ -17,7 +17,7 @@ const buttonStyle = {
   large: 'text-white bg-red-default w-full min-w-[336px] h-11 disabled:bg-red-disabled active:bg-red-touch',
 };
 
-export const Button = ({ type, status, textContent, onClickHandler }: ButtonProps) => {
+export const Button = ({ type, status, onClickHandler, children }: ButtonProps) => {
   const isButtonDisabled = status === 'disabled';
 
   return (
@@ -26,7 +26,7 @@ export const Button = ({ type, status, textContent, onClickHandler }: ButtonProp
       disabled={isButtonDisabled}
       onClick={onClickHandler}
     >
-      {textContent}
+      {children}
     </button>
   );
 };
