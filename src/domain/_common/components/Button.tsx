@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './button.css';
-
 interface ButtonProps {
   status: 'default' | 'disabled';
   type: 'normal' | 'text' | 'primary' | 'large';
