@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 
 export const DefaultText: Story = {
   args: {
-    textContent: '뒤로 가기',
+    children: '뒤로 가기',
     status: 'default',
     type: 'text',
   },
@@ -28,7 +28,7 @@ export const DefaultText: Story = {
 
 export const DisabledText: Story = {
   args: {
-    textContent: '뒤로 가기',
+    children: '뒤로 가기',
     status: 'disabled',
     type: 'text',
   },
