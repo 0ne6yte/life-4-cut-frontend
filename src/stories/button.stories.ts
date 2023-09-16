@@ -21,7 +21,7 @@ type Story = StoryObj<typeof meta>;
 export const DefaultText: Story = {
   args: {
     children: '뒤로 가기',
-    status: 'default',
+    isDisabled: false,
     type: 'text',
   },
 };
@@ -29,7 +29,7 @@ export const DefaultText: Story = {
 export const DisabledText: Story = {
   args: {
     children: '뒤로 가기',
-    status: 'disabled',
+    isDisabled: false,
     type: 'text',
   },
 };
