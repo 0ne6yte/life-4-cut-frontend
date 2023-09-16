@@ -10,6 +10,7 @@ const config: StorybookConfig = {
       name: '@storybook/addon-styling',
       options: { postCss: { implementation: require.resolve('postcss') } },
     },
+    '@storybook/addon-interactions',
   ],
   docs: {
     autodocs: 'tag',
