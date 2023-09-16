@@ -1,10 +1,8 @@
-import * as yup from 'yup';
-
 import type { Meta, StoryObj } from '@storybook/react';
-import { useForm } from 'react-hook-form';
 
 import { TextInput } from '@/domain/_common/components';
-import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from '@/hooks/useForm';
+import { yupSchema } from '@/utils/validation';
 
 const meta: Meta<typeof TextInput> = {
   title: 'Example/TextInput',
@@ -39,7 +37,7 @@ export const Error: Story = {
       defaultValues: {
         value1: '',
       },
-      resolver: yupResolver(yup.object().shape({ value1: yup.string().required('값을 입력해주세용') })),
+      schema: { value1: yupSchema.requiredString },
     });
 
     const onSubmit = handleSubmit((data) => {
@@ -52,22 +50,37 @@ export const Error: Story = {
     });
     return (
       <form onSubmit={onSubmit}>
-        <TextInput name="value1" label="WithError" control={control} />
+        <TextInput name="value1" label="Error" control={control} />
         <button type="submit">submit</button>
       </form>
     );
   },
 };
 
-export const UseChecking: Story = {
+export const UseCheckmark: Story = {
   render: () => {
     const { control } = useForm({
       defaultValues: {
-        name: '',
+        value1: '',
       },
-      resolver: yupResolver(yup.object().shape({ name: yup.string().required('값을 입력해주세용') })),
+      schema: { value1: yupSchema.requiredNumber },
+      mode: 'onChange',
     });
 
-    return <TextInput name="name" label="UseChecking" control={control} useCheckmark />;
+    return <TextInput name="value1" label="UseCheckmark" control={control} useCheckmark />;
+  },
+};
+
+export const NumberInput: Story = {
+  render: () => {
+    const { control } = useForm({
+      defaultValues: {
+        value1: '',
+      },
+      schema: { value1: yupSchema.number },
+      mode: 'onChange',
+    });
+
+    return <TextInput name="value1" label="NumberInput" control={control} />;
   },
 };
