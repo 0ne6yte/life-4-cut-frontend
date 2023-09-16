@@ -43,4 +43,9 @@ module.exports = {
     curly: ['error', 'all'], // 블록 구문 사용 권장
   },
   ignorePatterns: ['.eslintrc.js'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };
