@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { FloatingButton } from '@/domain/_common/components';
+import { expect } from '@storybook/jest';
+import { within } from '@storybook/testing-library';
 
 const meta = {
   title: 'Components/FloatingButton',
@@ -21,5 +23,9 @@ export const Default: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('button')).toBeDisabled();
   },
 };
