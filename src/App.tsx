@@ -1,12 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 
-import DefaultMobileLayout from './domain/_common/layouts/DefaultMobileLayout';
-
-import AlbumRouters from './routers/AlbumRouters';
-import PhotoRouters from './routers/PhotoRouters';
-
 import Login from './domain/Login';
 import MyPage from './domain/MyPage';
+import DefaultMobileLayout from './domain/_common/layouts/DefaultMobileLayout';
+import AlbumRouters from './routers/AlbumRouters';
+import PhotoRouters from './routers/PhotoRouters';
 
 function App() {
   return (

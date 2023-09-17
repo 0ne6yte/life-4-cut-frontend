@@ -1,4 +1,4 @@
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import AlbumList from '@/domain/Album/AlbumList';
 import EditAlbum from '@/domain/Album/EditAlbum';

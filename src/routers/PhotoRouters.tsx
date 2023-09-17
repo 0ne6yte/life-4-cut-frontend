@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import PhotoList from '@/domain/Photo/PhotoList';
 import RegisterPhoto from '@/domain/Photo/RegisterPhoto';
