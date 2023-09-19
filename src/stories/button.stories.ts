@@ -29,7 +29,7 @@ export const DefaultText: Story = {
 export const DisabledText: Story = {
   args: {
     children: '뒤로 가기',
-    isDisabled: false,
+    isDisabled: true,
     type: 'text',
   },
 };
