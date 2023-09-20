@@ -27,10 +27,10 @@ module.exports = {
         darkblue: '#0300A4',
       },
       grey: {
-        whitegray: '#F6F6F6',
+        lightgrey: '#F6F6F6',
         background: '#ECECEC',
         placeholder: '#c9c9c9',
-        buttontext: '#696969',
+        button_text: '#696969',
       },
       yellow: {
         default: '#F5D76F',

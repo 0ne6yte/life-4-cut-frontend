@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Avatar } from '@/domain/_common/components/Avatar';
 
 const meta = {
-  title: 'Components/Avatar',
+  title: 'Components/Avatar/Avatar',
   component: Avatar,
   parameters: {
     layout: 'centered',
@@ -20,6 +20,6 @@ export const Default: Story = {
 
 export const WithImage: Story = {
   args: {
-    image: 'https://avatars.githubusercontent.com/u/78866590?v=4',
+    imageUrl: 'https://avatars.githubusercontent.com/u/78866590?v=4',
   },
 };
