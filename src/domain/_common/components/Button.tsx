@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { type ReactNode } from 'react';
 
 interface ButtonProps {
   isDisabled: boolean;
   type: 'normal' | 'text' | 'primary' | 'large';
   onClick: () => void;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 const buttonStyle = {
