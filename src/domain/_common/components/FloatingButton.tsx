@@ -1,4 +1,4 @@
-import { PlusIcon } from '.';
+import { ReactComponent as PlusIcon } from '@/assets/plus.svg';
 
 interface FloatingButtonProps {
   onClick?: () => void;
@@ -14,9 +14,11 @@ export const FloatingButton = ({ onClick = () => {}, disabled = false }: Floatin
     <button
       onClick={handleButtonClick}
       disabled={disabled}
-      className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-highlight-gradient active:bg-highlight-gradient-dark disabled:bg-grey-whitegray disabled:bg-none"
+      className={`flex h-[52px] w-[52px] items-center justify-center rounded-full bg-highlight-gradient active:bg-highlight-gradient-dark disabled:bg-grey-whitegray disabled:bg-none ${
+        disabled ? 'stroke-grey-placeholder' : 'stroke-white'
+      }`}
     >
-      <PlusIcon color={disabled ? 'stroke-grey-placeholder' : 'stroke-white'} />
+      <PlusIcon />
     </button>
   );
 };
