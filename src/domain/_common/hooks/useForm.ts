@@ -5,11 +5,11 @@ import { type UseFormProps } from 'react-hook-form/dist/types';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 
-interface HookProps {
-  defaultValues: Record<string, any>;
-  schema?: Record<string, yup.Schema<any>>;
+interface HookProps<T> {
+  defaultValues: T;
+  schema?: Record<string, yup.Schema>;
 }
-export function useForm({ defaultValues, schema, ...props }: HookProps & UseFormProps<FieldValues>) {
+export function useForm<T>({ defaultValues, schema, ...props }: HookProps<T> & UseFormProps<FieldValues>) {
   return useReactHookForm({
     defaultValues,
     ...(schema !== undefined && { resolver: yupResolver(yup.object().shape(schema)) }),
