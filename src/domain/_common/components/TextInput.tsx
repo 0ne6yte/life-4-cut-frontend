@@ -20,12 +20,12 @@ export const TextInput = ({ name, label, control, useCheckmark = false, ...props
       control={control}
       render={({ field, fieldState: { error, invalid, isDirty } }) => (
         <>
-          <div className={`input ${error !== undefined ? 'input--error' : ''}`}>
+          <div className={`input ${error ? 'input--error' : ''}`}>
             <input placeholder={label} {...props} {...field} />
             {useCheckmark && !invalid && isDirty && <CheckMark />}
-            {error !== undefined && <ErrorMark />}
+            {error && <ErrorMark />}
           </div>
-          {error !== undefined && <div className="input--error-message">{error.message}</div>}
+          {error && <div className="input--error-message">{error.message}</div>}
         </>
       )}
     />
