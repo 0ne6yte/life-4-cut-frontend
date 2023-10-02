@@ -1,16 +1,33 @@
 import { ReactComponent as AvatarIcon } from '@/assets/avatar-icon.svg';
 import generateRandomColor from '@/utils/generateRandomColor';
 
-interface AvatarIconProps {
+interface AvatarProfileProps {
   imageUrl?: string;
   isSmall?: boolean;
 }
 
-interface AvatarListProps extends AvatarIconProps {
+interface AvatarProps extends AvatarProfileProps {
+  type: 'icon' | 'column' | 'row';
+}
+
+interface AvatarListProps extends AvatarProfileProps {
   userName: string;
 }
 
-export const Avatar = ({ imageUrl, isSmall = false }: AvatarIconProps) => {
+export default function Avatar({ type, imageUrl, isSmall = false }: AvatarProps) {
+  switch (type) {
+    case 'icon':
+      return <AvatarProfile imageUrl={imageUrl} isSmall={isSmall} />;
+    case 'column':
+      return <AvatarProfile.listColumn imageUrl={imageUrl} userName={'test'} isSmall={isSmall} />;
+    case 'row':
+      return <AvatarProfile.listRow imageUrl={imageUrl} userName={'test'} isSmall={isSmall} />;
+    default:
+      return null;
+  }
+}
+
+export function AvatarProfile({ imageUrl, isSmall = false }: AvatarProfileProps) {
   const backgroundColor = generateRandomColor();
 
   return (
@@ -30,21 +47,23 @@ export const Avatar = ({ imageUrl, isSmall = false }: AvatarIconProps) => {
       )}
     </div>
   );
-};
+}
 
-Avatar.listColumn = ({ imageUrl, userName }: AvatarListProps) => {
+AvatarProfile.listColumn = ({ imageUrl, userName }: AvatarListProps) => {
   return (
     <div>
-      <Avatar imageUrl={imageUrl} />
+      <AvatarProfile imageUrl={imageUrl} />
       <p className={'text-center text-grey-placeholder text-body8 mt-1'}>{userName}</p>
     </div>
   );
 };
 
-Avatar.listRow = ({ imageUrl, userName }: AvatarListProps) => {
+AvatarProfile.listRow = ({ imageUrl, userName }: AvatarListProps) => {
   return (
-    <div className="text-center">
-      <Avatar imageUrl={imageUrl} />
+    <div className="text-center flex items-center text-body13">
+      <div className={'mr-2.5'}>
+        <AvatarProfile imageUrl={imageUrl} />
+      </div>
       <p>{userName}</p>
     </div>
   );
