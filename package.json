@@ -2,7 +2,7 @@
   "name": "life-4-cut-frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.tsx",
+  "main": "src/Main.tsx",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

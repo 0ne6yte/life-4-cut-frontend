@@ -5,7 +5,7 @@ interface FloatingButtonProps {
   disabled?: boolean;
 }
 
-export const FloatingButton = ({ onClick = () => {}, disabled = false }: FloatingButtonProps) => {
+export function FloatingButton({ onClick = () => {}, disabled = false }: FloatingButtonProps) {
   const handleButtonClick = () => {
     onClick();
   };
@@ -21,4 +21,4 @@ export const FloatingButton = ({ onClick = () => {}, disabled = false }: Floatin
       <PlusIcon />
     </button>
   );
-};
+}

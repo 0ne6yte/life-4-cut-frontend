@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Login from './domain/Login';
-import MyPage from './domain/MyPage';
 import DefaultMobileLayout from './domain/_common/layouts/DefaultMobileLayout';
+import Login from './domain/login';
+import MyPage from './domain/myPage';
 import AlbumRouters from './routers/AlbumRouters';
 import PhotoRouters from './routers/PhotoRouters';
 
