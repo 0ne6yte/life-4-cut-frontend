@@ -49,6 +49,7 @@ module.exports = {
         default: '#E0F5CA',
         touch: '#C1E29F',
       },
+      transparent: 'transparent',
     },
     fontSize: {
       headline1: [
