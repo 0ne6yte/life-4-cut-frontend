@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { TextInput } from '@/domain/_common/components';
-import { useForm } from '@/domain/_common/hooks';
+import { useForm } from '@/hooks';
 import { yupSchema } from '@/utils/validation';
 
 const meta: Meta<typeof TextInput> = {

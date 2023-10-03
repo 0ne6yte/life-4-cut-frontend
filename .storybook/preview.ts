@@ -1,6 +1,6 @@
 import { withThemeByDataAttribute } from '@storybook/addon-styling';
 
-import '../src/domain/_common/styles/global.css';
+import '../src/global.css';
 
 export const decorators = [
   withThemeByDataAttribute({
