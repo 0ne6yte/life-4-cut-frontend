@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { TextInput } from '@/domain/_common/components';
+import { Button, TextInput } from '@/domain/_common/components';
 import { useForm } from '@/hooks';
 import { yupSchema } from '@/utils/validation';
 
 const meta: Meta<typeof TextInput> = {
-  title: 'Example/TextInput',
+  title: 'Components/TextInput',
   component: TextInput,
   parameters: {
     layout: 'centered',
@@ -49,10 +49,12 @@ export const Error: Story = {
       }
     });
     return (
-      <form onSubmit={onSubmit}>
+      <>
         <TextInput name="value1" label="Error" control={control} />
-        <button type="submit">submit</button>
-      </form>
+        <Button type="primary" onClick={onSubmit} isDisabled={false}>
+          submit
+        </Button>
+      </>
     );
   },
 };
