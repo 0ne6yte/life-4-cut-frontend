@@ -13,7 +13,7 @@ interface InputProps {
   useCheckmark?: boolean;
 }
 
-export const TextInput = ({ name, label, control, useCheckmark = false, ...props }: InputProps) => {
+export function TextInput({ name, label, control, useCheckmark = false, ...props }: InputProps) {
   return (
     <Controller
       name={name}
@@ -30,4 +30,4 @@ export const TextInput = ({ name, label, control, useCheckmark = false, ...props
       )}
     />
   );
-};
+}
