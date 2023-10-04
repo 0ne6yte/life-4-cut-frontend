@@ -1,10 +1,8 @@
-import { type ReactNode } from 'react';
-
 import { ReactComponent as UserIcon } from '@/assets/user.svg';
 
 interface BadgeProps {
+  text: string;
   onClick?: () => void;
-  children?: ReactNode;
   variant?: 'default' | 'gradient' | 'info';
 }
 
@@ -14,11 +12,11 @@ const badgeStyle = {
   info: 'rounded-[20px] bg-grey-buttontext text-white',
 };
 
-export function Badge({ onClick, children, variant = 'default' }: BadgeProps) {
+export function Badge({ onClick, text, variant = 'default' }: BadgeProps) {
   return (
     <div onClick={onClick} className={`p-[8px] flex items-center ${badgeStyle[variant]} gap-[4px]`}>
       {variant === 'info' && <UserIcon />}
-      <span className="text-[9px] font-bold select-none">{children}</span>
+      <span className="text-[9px] font-bold select-none">{text}</span>
     </div>
   );
 }

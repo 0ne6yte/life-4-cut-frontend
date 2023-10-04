@@ -15,19 +15,19 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: { variant: 'default', children: '#일상' },
+  args: { variant: 'default', text: '#일상' },
 };
 
 export const Gradient: Story = {
   args: {
     variant: 'gradient',
-    children: '#일상',
+    text: '#일상',
   },
 };
 
 export const Info: Story = {
   args: {
     variant: 'info',
-    children: '3명',
+    text: '3명',
   },
 };
