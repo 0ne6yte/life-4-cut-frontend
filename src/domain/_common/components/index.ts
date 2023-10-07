@@ -1,4 +1,4 @@
 export * from './Button';
 export * from './TextInput';
 export * from './FloatingButton';
-export * from './BadgeButton';
+export * from './IconButton';

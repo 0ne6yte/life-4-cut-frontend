@@ -1,11 +1,13 @@
-import { ReactComponent as ArrwoDownIcon } from '@/assets/arrow-down.svg';
+import type { ReactNode } from 'react';
 
-interface BadgeButtonProps {
+interface IconButtonProps {
   onClick?: () => void;
   disabled?: boolean;
+  text: string;
+  icon: ReactNode;
 }
 
-export function BadgeButton({ onClick = () => {}, disabled = false }: BadgeButtonProps) {
+export function IconButton({ onClick = () => {}, disabled = false, text, icon }: IconButtonProps) {
   const handleButtonClick = () => {
     onClick();
   };
@@ -18,8 +20,8 @@ export function BadgeButton({ onClick = () => {}, disabled = false }: BadgeButto
         disabled ? 'fill-grey-placeholder' : 'fill-white'
       }`}
     >
-      <p className="text-white text-headline3 font-bold group-disabled:text-grey-placeholder">일상</p>
-      <ArrwoDownIcon />
+      <p className="text-white text-headline3 font-bold group-disabled:text-grey-placeholder">{text}</p>
+      {icon}
     </button>
   );
 }
