@@ -20,3 +20,17 @@ export const ThinVertical: Story = {
     isSelected: false,
   },
 };
+
+export const FatVertical: Story = {
+  args: {
+    type: 'fatVertical',
+    isSelected: false,
+  },
+};
+
+export const FatHorizontal: Story = {
+  args: {
+    type: 'fatHorizontal',
+    isSelected: false,
+  },
+};
