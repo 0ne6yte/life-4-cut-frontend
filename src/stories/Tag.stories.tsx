@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Badge } from '@/domain/_common/components/Badge';
+import { Tag } from '@/domain/_common/components/Tag';
 
 const meta = {
-  title: 'Components/Badge',
-  component: Badge,
+  title: 'Components/Tag',
+  component: Tag,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Badge>;
+} satisfies Meta<typeof Tag>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,12 +22,5 @@ export const Gradient: Story = {
   args: {
     variant: 'gradient',
     text: '#일상',
-  },
-};
-
-export const Info: Story = {
-  args: {
-    variant: 'info',
-    text: '3명',
   },
 };
