@@ -1,3 +1,4 @@
+import { ReactComponent as CheckMark } from '@/assets/check-mark.svg';
 import { ReactComponent as FatHorizontalIcon } from '@/assets/fat-horizontal.svg';
 import { ReactComponent as FatVerticalIcon } from '@/assets/fat-vertical.svg';
 import { ReactComponent as ThinVerticalIcon } from '@/assets/thin-vertical.svg';
@@ -23,23 +24,20 @@ const DataByType = {
   },
 };
 
-const checkboxStyleVariant = {
-  fatHorizontal: '',
-  fatVertical: '',
-  thinVertical: '',
-};
-
 export function Checkbox({ type, isSelected }: CheckboxProps) {
   const Icon = DataByType[type].iconComponent;
 
   return (
     <button
-      className={`w-[336px] h-[101px] border-2 border-grey-placeholder rounded-xl flex justify-start items-center font-bold text-[24px] ${
-        checkboxStyleVariant[type]
-      } ${isSelected ? '' : ''}`}
+      className={`relative w-[336px] h-[101px] border-2 rounded-xl flex justify-start items-center font-bold text-[24px] ${
+        isSelected
+          ? 'text-white bg-primary-default border-primary-default'
+          : 'text-grey-placeholder border-grey-placeholder'
+      }`}
     >
-      <Icon className="pl-[14px] pr-[14px] w-16 h-16 " />
+      <Icon className={`pl-[14px] pr-[14px] w-16 h-16 ${isSelected ? '[&>*]:stroke-primary-default' : ''}`} />
       {DataByType[type].text}
+      {isSelected ? <CheckMark className="absolute right-3 w-[20px] h-[20px] [&>*]:fill-white" /> : null}
     </button>
   );
 }

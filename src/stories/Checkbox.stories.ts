@@ -21,6 +21,13 @@ export const ThinVertical: Story = {
   },
 };
 
+export const ThinVerticalSelected: Story = {
+  args: {
+    type: 'thinVertical',
+    isSelected: true,
+  },
+};
+
 export const FatVertical: Story = {
   args: {
     type: 'fatVertical',
@@ -28,9 +35,23 @@ export const FatVertical: Story = {
   },
 };
 
+export const FatVerticalSelected: Story = {
+  args: {
+    type: 'fatVertical',
+    isSelected: true,
+  },
+};
+
 export const FatHorizontal: Story = {
   args: {
     type: 'fatHorizontal',
     isSelected: false,
+  },
+};
+
+export const FatHorizontalSelected: Story = {
+  args: {
+    type: 'fatHorizontal',
+    isSelected: true,
   },
 };
