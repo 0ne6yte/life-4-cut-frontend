@@ -5,6 +5,8 @@ import Modal from '@/domain/_common/components/Modal';
 interface ModalData {
   title: string;
   message: string;
+  closeButton?: { label: string; onClick?: () => void };
+  confirmButton?: { label: string; onClick: () => void };
 }
 
 interface ModalContextType {
@@ -17,8 +19,13 @@ export function ModalProvider({ children }: PropsWithChildren) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [modalData, setModalData] = useState<ModalData>({ title: '', message: '' });
 
-  const openModal = ({ title, message }: ModalData) => {
-    setModalData({ title, message });
+  const openModal = ({ title, message, closeButton, confirmButton }: ModalData) => {
+    setModalData({
+      title,
+      message,
+      closeButton,
+      confirmButton,
+    });
     setIsOpen(true);
   };
 
@@ -34,10 +41,9 @@ export function ModalProvider({ children }: PropsWithChildren) {
         <Modal
           title={modalData.title}
           message={modalData.message}
-          buttons={[
-            { type: 'normal', children: '확인', onClick: closeModal, isDisabled: false },
-            { type: 'primary', children: '취소', onClick: closeModal, isDisabled: false },
-          ]}
+          onClose={closeModal}
+          closeButton={modalData.closeButton}
+          confirmButton={modalData.confirmButton}
         />
       )}
     </ModalContext.Provider>

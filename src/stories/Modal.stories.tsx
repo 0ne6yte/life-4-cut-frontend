@@ -21,7 +21,19 @@ export const Basic: Story = {
     const { openModal } = useModal();
 
     const onClick = () => {
-      openModal({ title: '제목', message: '메시지' });
+      openModal({
+        title: '제목',
+        message: '메시지',
+        closeButton: {
+          label: '닫기',
+        },
+        confirmButton: {
+          label: '확인',
+          onClick: () => {
+            alert('확인');
+          },
+        },
+      });
     };
 
     return (
