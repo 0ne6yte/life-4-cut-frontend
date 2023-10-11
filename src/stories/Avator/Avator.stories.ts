@@ -33,6 +33,7 @@ export const ColumnProfileWithImage: Story = {
   args: {
     type: 'column',
     imageUrl: 'https://avatars.githubusercontent.com/u/78866590?v=4',
+    userName: 'test',
   },
 };
 
@@ -42,5 +43,6 @@ export const RowProfileWithImage: Story = {
   args: {
     type: 'row',
     imageUrl: 'https://avatars.githubusercontent.com/u/78866590?v=4',
+    userName: 'test',
   },
 };

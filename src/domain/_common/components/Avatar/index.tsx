@@ -4,6 +4,7 @@ import generateRandomColor from '@/utils/generateRandomColor';
 interface AvatarProfileProps {
   imageUrl?: string;
   isSmall?: boolean;
+  userName?: string;
 }
 
 interface AvatarProps extends AvatarProfileProps {
@@ -14,14 +15,14 @@ interface AvatarListProps extends AvatarProfileProps {
   userName: string;
 }
 
-export default function Avatar({ type, imageUrl, isSmall = false }: AvatarProps) {
+export default function Avatar({ type, imageUrl, userName = '', isSmall = false }: AvatarProps) {
   switch (type) {
     case 'icon':
       return <AvatarProfile imageUrl={imageUrl} isSmall={isSmall} />;
     case 'column':
-      return <AvatarProfile.listColumn imageUrl={imageUrl} userName={'test'} isSmall={isSmall} />;
+      return <AvatarProfile.listColumn imageUrl={imageUrl} userName={userName} isSmall={isSmall} />;
     case 'row':
-      return <AvatarProfile.listRow imageUrl={imageUrl} userName={'test'} isSmall={isSmall} />;
+      return <AvatarProfile.listRow imageUrl={imageUrl} userName={userName} isSmall={isSmall} />;
     default:
       return null;
   }
