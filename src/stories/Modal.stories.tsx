@@ -12,7 +12,6 @@ export default {
       url: 'https://www.figma.com/file/KHvd0JBcID35sOdr61Iief/Main?type=design&node-id=216-7319&mode=design&t=jq3LIMBJupzd6oGf-4',
     },
   },
-  tags: ['autodocs'],
 } satisfies Meta<typeof HTMLDivElement>;
 
 type Story = StoryObj<typeof HTMLDivElement>;
