@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '@/domain/_common/components';
+import { VariantButton } from '@/domain/_common/components';
 
 const meta = {
-  title: 'Example/Button',
-  component: Button,
+  title: 'Contents/Button',
+  component: VariantButton,
   parameters: {
     layout: 'centered',
     design: {
@@ -13,7 +13,7 @@ const meta = {
     },
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof VariantButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,7 +22,7 @@ export const DefaultText: Story = {
   args: {
     children: '뒤로 가기',
     isDisabled: false,
-    type: 'text',
+    style: 'text',
   },
 };
 
@@ -30,6 +30,6 @@ export const DisabledText: Story = {
   args: {
     children: '뒤로 가기',
     isDisabled: true,
-    type: 'text',
+    style: 'text',
   },
 };
