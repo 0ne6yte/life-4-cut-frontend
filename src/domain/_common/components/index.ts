@@ -1,3 +1,3 @@
-export * from './Button';
+export * from './VariantButton';
 export * from './FloatingButton';
 export * from './TextInput';
