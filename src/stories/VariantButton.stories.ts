@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { VariantButton } from '@/domain/_common/components';
 
 const meta = {
-  title: 'Contents/Button',
+  title: 'Contents/VariantButton',
   component: VariantButton,
   parameters: {
     layout: 'centered',
