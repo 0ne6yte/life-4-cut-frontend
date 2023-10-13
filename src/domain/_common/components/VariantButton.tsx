@@ -1,7 +1,7 @@
 import React, { type ReactNode } from 'react';
 
 interface ButtonProps {
-  isDisabled: boolean;
+  disabled?: boolean;
   style: 'normal' | 'text' | 'primary' | 'large';
   type?: 'button' | 'submit';
   onClick?: () => void;
