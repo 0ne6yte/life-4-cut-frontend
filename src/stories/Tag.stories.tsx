@@ -15,12 +15,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: { variant: 'default', text: '#일상' },
+  args: { variant: 'default', text: '일상' },
 };
 
 export const Gradient: Story = {
   args: {
     variant: 'gradient',
-    text: '#일상',
+    text: '일상',
   },
 };

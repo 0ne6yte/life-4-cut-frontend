@@ -12,7 +12,7 @@ const tagStyle = {
 export function Tag({ onClick, text, variant = 'default' }: TagProps) {
   return (
     <div onClick={onClick} className={`p-[8px] flex items-center ${tagStyle[variant]} gap-[4px]`}>
-      <span className="text-[9px] font-bold select-none">{text}</span>
+      <span className="text-[9px] font-bold select-none">#{text}</span>
     </div>
   );
 }
