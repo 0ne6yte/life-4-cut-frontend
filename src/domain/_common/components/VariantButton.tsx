@@ -4,6 +4,7 @@ interface ButtonProps {
   isDisabled: boolean;
   style: 'normal' | 'text' | 'primary' | 'large';
   type?: 'button' | 'submit';
+  onClick?: () => void;
   children?: ReactNode;
 }
 
