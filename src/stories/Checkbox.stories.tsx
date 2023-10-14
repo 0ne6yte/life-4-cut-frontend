@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Checkbox } from '@/domain/_common/components';
+import { useForm } from '@/hooks';
+import { yupSchema } from '@/utils/validation';
 
 const meta: Meta<typeof Checkbox> = {
   title: 'Components/Checkbox',
@@ -17,41 +19,69 @@ type Story = StoryObj<typeof meta>;
 export const ThinVertical: Story = {
   args: {
     type: 'thinVertical',
-    isSelected: false,
+    // isSelected: false,
   },
 };
 
 export const ThinVerticalSelected: Story = {
   args: {
     type: 'thinVertical',
-    isSelected: true,
+    // isSelected: true,
   },
 };
 
 export const FatVertical: Story = {
   args: {
     type: 'fatVertical',
-    isSelected: false,
+    // isSelected: false,
   },
 };
 
 export const FatVerticalSelected: Story = {
   args: {
     type: 'fatVertical',
-    isSelected: true,
+    // isSelected: true,
   },
 };
 
 export const FatHorizontal: Story = {
   args: {
     type: 'fatHorizontal',
-    isSelected: false,
+    // isSelected: false,
   },
 };
 
 export const FatHorizontalSelected: Story = {
   args: {
     type: 'fatHorizontal',
-    isSelected: true,
+    // isSelected: true,
+  },
+};
+
+export const CheckboxForm: Story = {
+  render: () => {
+    const { control } = useForm({
+      defaultValues: {
+        checkbox: '',
+      },
+      schema: {
+        checkbox: yupSchema.requiredString,
+      },
+      mode: 'onChange',
+    });
+
+    return (
+      <ul className="flex flex-col gap-3">
+        <li>
+          <Checkbox type="fatHorizontal" control={control} />
+        </li>
+        <li>
+          <Checkbox type="fatVertical" control={control} />
+        </li>
+        <li>
+          <Checkbox type="thinVertical" control={control} />
+        </li>
+      </ul>
+    );
   },
 };
