@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { VariantButton } from '@/domain/_common/components';
+import { Button } from '@/domain/_common/components';
 
 const meta = {
-  title: 'Contents/VariantButton',
-  component: VariantButton,
+  title: 'Contents/Button',
+  component: Button,
   parameters: {
     layout: 'centered',
     design: {
@@ -13,23 +13,22 @@ const meta = {
     },
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof VariantButton>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Button>;
 
 export const DefaultText: Story = {
   args: {
     children: '뒤로 가기',
-    isDisabled: false,
-    style: 'text',
+    variant: 'text',
   },
 };
 
 export const DisabledText: Story = {
   args: {
     children: '뒤로 가기',
-    isDisabled: true,
-    style: 'text',
+    disabled: true,
+    variant: 'text',
   },
 };
