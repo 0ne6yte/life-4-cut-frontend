@@ -1,2 +1,2 @@
 export * from './pxToRem';
-export * from './generateRandomColor';
+export * from './generateVividColor';
