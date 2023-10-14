@@ -21,9 +21,7 @@ export const Default: Story = {
       <div className="relative">
         <Dropdown>
           <Dropdown.Trigger>
-            <Button isDisabled={false} type="text" onClick={() => {}}>
-              버튼
-            </Button>
+            <Button variant="text">버튼</Button>
           </Dropdown.Trigger>
           <Dropdown.List>
             <Dropdown.Item>1번</Dropdown.Item>
