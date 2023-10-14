@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AlbumThumbnail from '@/domain/_common/components/AlbumThumbnail';
 
 const meta = {
-  title: 'Components/AlbumThumbnail/AlbumThumbnail',
+  title: 'Components/AlbumThumbnail',
   component: AlbumThumbnail,
   parameters: {
     layout: 'centered',
