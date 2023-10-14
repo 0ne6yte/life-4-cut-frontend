@@ -12,7 +12,7 @@ const meta = {
 } satisfies Meta<typeof Bubble>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Bubble>;
 
 export const Default: Story = {
   args: {
