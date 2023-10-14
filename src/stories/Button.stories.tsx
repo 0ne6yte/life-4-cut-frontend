@@ -25,7 +25,7 @@ export const Default: Story = {
 };
 export const Grey: Story = {
   render: () => (
-    <div className="flex gap-2">
+    <div className="flex gap-2 w-[800px] flex-wrap">
       <Button variant="text" color="grey">
         text
       </Button>
@@ -44,7 +44,7 @@ export const Grey: Story = {
 
 export const Primary: Story = {
   render: () => (
-    <div className="flex gap-2">
+    <div className="flex gap-2 w-[800px] flex-wrap">
       <Button variant="text" color="primary">
         text
       </Button>
@@ -63,7 +63,7 @@ export const Primary: Story = {
 
 export const Red: Story = {
   render: () => (
-    <div className="flex gap-2">
+    <div className="flex gap-2 w-[800px] flex-wrap">
       <Button variant="text" color="red">
         text
       </Button>

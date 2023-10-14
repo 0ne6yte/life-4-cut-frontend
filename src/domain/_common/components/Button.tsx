@@ -35,7 +35,7 @@ export function Button({
 }: React.PropsWithChildren<ButtonProps>) {
   return (
     <button
-      className={`border-none rounded-lg text-sm font-bold w-40 h-11 ${buttonStyle[color][variant]}`}
+      className={`border-none rounded-lg text-sm font-bold flex-1 p-[13px] ${buttonStyle[color][variant]}`}
       disabled={disabled}
       type={type}
       onClick={onClick}
