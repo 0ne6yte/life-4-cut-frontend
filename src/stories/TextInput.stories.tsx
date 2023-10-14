@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { VariantButton, TextInput } from '@/domain/_common/components';
+import { Button, TextInput } from '@/domain/_common/components';
 import { useForm } from '@/hooks';
 import { yupSchema } from '@/utils/validation';
 
@@ -51,9 +51,9 @@ export const Error: Story = {
     return (
       <form onSubmit={onSubmit}>
         <TextInput name="value1" label="Error" control={control} />
-        <VariantButton style="primary" isDisabled={false}>
+        <Button variant="primary" onClick={onSubmit}>
           submit
-        </VariantButton>
+        </Button>
       </form>
     );
   },
