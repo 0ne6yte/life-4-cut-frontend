@@ -40,7 +40,7 @@ export function Checkbox({ type, control }: CheckboxProps) {
 
         return (
           <button
-            className={`relative w-[336px] h-[101px] border-2 rounded-xl flex justify-start items-center font-bold text-[24px] ${
+            className={`w-[336px] h-[101px] border-2 rounded-xl flex justify-start items-center font-bold text-[24px] p-3 ${
               isSelected
                 ? 'text-white bg-primary-default border-primary-default'
                 : 'text-grey-placeholder border-grey-placeholder'
@@ -49,9 +49,9 @@ export function Checkbox({ type, control }: CheckboxProps) {
               field.onChange(type);
             }}
           >
-            <Icon className={`pl-[14px] pr-[14px] w-16 h-16 ${isSelected ? '[&>*]:stroke-primary-default' : ''}`} />
-            {DataByType[type].text}
-            {isSelected ? <CheckMark className="absolute right-3 w-[20px] h-[20px] [&>*]:fill-white" /> : null}
+            <Icon className={`w-12 h-12 pr-2 ${isSelected ? '[&>*]:stroke-primary-default' : ''}`} />
+            <span className="font-bold text-[24px] flex-1 text-left">{DataByType[type].text}</span>
+            {isSelected ? <CheckMark className="right-3 w-[20px] h-[20px] [&>*]:fill-white" /> : null}
           </button>
         );
       }}
