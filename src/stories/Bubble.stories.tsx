@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Bubble from '@/domain/_common/components/Bubble';
 
 const meta = {
-  title: 'Example/Bubble',
+  title: 'Components/Bubble',
   component: Bubble,
   parameters: {
     layout: 'centered',
