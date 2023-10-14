@@ -49,12 +49,12 @@ export const Error: Story = {
       }
     });
     return (
-      <>
+      <form onSubmit={onSubmit}>
         <TextInput name="value1" label="Error" control={control} />
-        <Button type="primary" onClick={onSubmit} isDisabled={false}>
+        <Button variant="primary" onClick={onSubmit}>
           submit
         </Button>
-      </>
+      </form>
     );
   },
 };
