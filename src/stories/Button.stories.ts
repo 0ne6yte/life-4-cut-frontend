@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@/domain/_common/components';
 
 const meta = {
-  title: 'Example/Button',
+  title: 'Components/Button',
   component: Button,
   parameters: {
     layout: 'centered',
@@ -21,15 +21,14 @@ type Story = StoryObj<typeof meta>;
 export const DefaultText: Story = {
   args: {
     children: '뒤로 가기',
-    isDisabled: false,
-    type: 'text',
+    variant: 'text',
   },
 };
 
 export const DisabledText: Story = {
   args: {
     children: '뒤로 가기',
-    isDisabled: true,
-    type: 'text',
+    disabled: true,
+    variant: 'text',
   },
 };
