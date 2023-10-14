@@ -16,48 +16,6 @@ const meta: Meta<typeof Checkbox> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const ThinVertical: Story = {
-  args: {
-    type: 'thinVertical',
-    // isSelected: false,
-  },
-};
-
-export const ThinVerticalSelected: Story = {
-  args: {
-    type: 'thinVertical',
-    // isSelected: true,
-  },
-};
-
-export const FatVertical: Story = {
-  args: {
-    type: 'fatVertical',
-    // isSelected: false,
-  },
-};
-
-export const FatVerticalSelected: Story = {
-  args: {
-    type: 'fatVertical',
-    // isSelected: true,
-  },
-};
-
-export const FatHorizontal: Story = {
-  args: {
-    type: 'fatHorizontal',
-    // isSelected: false,
-  },
-};
-
-export const FatHorizontalSelected: Story = {
-  args: {
-    type: 'fatHorizontal',
-    // isSelected: true,
-  },
-};
-
 export const CheckboxForm: Story = {
   render: () => {
     const { control } = useForm({
