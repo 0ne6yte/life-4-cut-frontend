@@ -39,9 +39,9 @@ interface TabListProps {
 
 function TabList({ children, className = '' }: TabListProps) {
   return (
-    <li role="tab" className={`p-[6px] rounded-[10px] flex items-center space-x-[5px] bg-white ${className}`}>
+    <ul role="tab" className={`p-[6px] rounded-[10px] flex items-center space-x-[5px] bg-white ${className}`}>
       {children}
-    </li>
+    </ul>
   );
 }
 
