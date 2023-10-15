@@ -1,6 +1,6 @@
 import React, { type ReactNode } from 'react';
 
-interface ButtonProps {
+export interface ButtonProps {
   disabled?: boolean;
   variant?: 'text' | 'contained';
   color?: 'grey' | 'primary' | 'red';

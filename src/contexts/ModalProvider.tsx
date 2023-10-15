@@ -1,12 +1,17 @@
 import { createContext, type PropsWithChildren, useContext, useState } from 'react';
 
+import { type ButtonProps } from '@/domain/_common/components';
 import Modal from '@/domain/_common/components/Modal';
 
 interface ModalData {
   title: string;
   message: string;
-  closeButton?: { label: string; onClick?: () => void };
-  confirmButton?: { label: string; onClick: () => void };
+  closeButton?: {
+    text: string;
+  } & Omit<ButtonProps, 'children'>;
+  confirmButton?: {
+    text: string;
+  } & Omit<ButtonProps, 'children'>;
 }
 
 interface ModalContextType {
