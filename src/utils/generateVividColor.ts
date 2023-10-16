@@ -1,6 +1,4 @@
-const generateVividColor = () => {
-  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  return `#${randomColor}`;
+export const generateVividColor = () => {
+  const [R, G, B] = Array.from({ length: 3 }, (_) => Math.floor(Math.random() * 128) + 128);
+  return `rgb(${R},${G},${B})`;
 };
-
-export default generateVividColor;

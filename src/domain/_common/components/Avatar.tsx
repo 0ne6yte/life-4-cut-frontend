@@ -1,40 +1,29 @@
 import { ReactComponent as AvatarIcon } from '@/assets/avatar-icon.svg';
-import generateVividColor from '@/utils/generateVividColor';
+import { ReactComponent as DeleteButton } from '@/assets/x-button.svg';
+import { generateVividColor } from '@/utils';
 
-interface AvatarProfileProps {
+interface AvatarPhotoProps {
   imageUrl?: string;
   size?: 'small' | 'large';
 }
 
-interface AvatarProps extends AvatarProfileProps {
-  variant: 'icon' | 'column' | 'row';
+interface AvatarListProps extends AvatarPhotoProps {
   username: string;
 }
 
-interface AvatarListProps extends AvatarProfileProps {
-  username: string;
+interface AvatarColumnProps extends AvatarListProps {
+  onClickDelete: () => null;
 }
 
-export default function Avatar({ variant, imageUrl, username, size = 'small' }: AvatarProps) {
-  switch (variant) {
-    case 'icon':
-      return <AvatarProfile imageUrl={imageUrl} size={size} />;
-    case 'column':
-      return <AvatarProfile.listColumn imageUrl={imageUrl} username={username} size={size} />;
-    case 'row':
-      return <AvatarProfile.listRow imageUrl={imageUrl} username={username} size={size} />;
-    default:
-      return null;
-  }
-}
-
-function AvatarProfile({ imageUrl, size = 'small' }: AvatarProfileProps) {
+function AvatarPhoto({ imageUrl, size = 'large' }: AvatarPhotoProps) {
   const backgroundColor = generateVividColor();
 
   return (
     <div
       style={{ backgroundColor }}
-      className={`flex justify-center items-center ${size ? 'h-5' : 'h-[34px]'} ${size ? 'w-5' : 'w-[34px]'}
+      className={`flex justify-center items-center ${size === 'small' ? 'h-5' : 'h-[34px]'} ${
+        size === 'small' ? 'w-5' : 'w-[34px]'
+      }
       rounded-full overflow-hidden`}
     >
       {imageUrl !== undefined ? (
@@ -48,20 +37,27 @@ function AvatarProfile({ imageUrl, size = 'small' }: AvatarProfileProps) {
   );
 }
 
-AvatarProfile.listColumn = ({ imageUrl, username }: AvatarListProps) => {
+function AvatarRow({ imageUrl, username, onClickDelete }: AvatarColumnProps) {
   return (
     <div>
-      <AvatarProfile imageUrl={imageUrl} />
+      <div className={'relative'}>
+        <AvatarPhoto imageUrl={imageUrl} />
+        <button type={'button'} onClick={onClickDelete} className={'absolute top-[-1px] right-[-1px]'}>
+          <DeleteButton />
+        </button>
+      </div>
       <p className={'text-center text-grey-placeholder text-body8 mt-1'}>{username}</p>
     </div>
   );
-};
+}
 
-AvatarProfile.listRow = ({ imageUrl, username }: AvatarListProps) => {
+function AvatarColumn({ imageUrl, username }: AvatarListProps) {
   return (
-    <div className="text-center flex items-center text-body13 gap-2.5">
-      <AvatarProfile imageUrl={imageUrl} />
+    <div className="text-center flex items-center text-[14px] font-medium gap-2.5">
+      <AvatarPhoto imageUrl={imageUrl} />
       <p>{username}</p>
     </div>
   );
-};
+}
+
+export default { AvatarPhoto, AvatarColumn, AvatarRow };
