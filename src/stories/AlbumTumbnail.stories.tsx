@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import AlbumThumbnail from '@/domain/_common/components/AlbumThumnail';
+import AlbumThumbnail from '@/domain/_common/components/AlbumThumbnail';
 
 const meta = {
   title: 'Components/AlbumThumbnail',
