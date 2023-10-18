@@ -2,20 +2,20 @@ import { ReactComponent as AvatarIcon } from '@/assets/avatar-icon.svg';
 import { ReactComponent as DeleteButton } from '@/assets/x-button.svg';
 import { generateVividColor } from '@/utils';
 
-interface AvatarPhotoProps {
+export interface AvatarProfilePhotoProps {
   imageUrl?: string;
   size?: 'small' | 'large';
 }
 
-interface AvatarListProps extends AvatarPhotoProps {
+export interface AvatarListProps extends AvatarProfilePhotoProps {
   username: string;
 }
 
-interface AvatarColumnProps extends AvatarListProps {
+export interface AvatarRowProps extends AvatarListProps {
   onClickDelete: () => null;
 }
 
-function ProfilePhoto({ imageUrl, size = 'large' }: AvatarPhotoProps) {
+function ProfilePhoto({ imageUrl, size = 'large' }: AvatarProfilePhotoProps) {
   const backgroundColor = generateVividColor();
 
   return (
@@ -37,7 +37,7 @@ function ProfilePhoto({ imageUrl, size = 'large' }: AvatarPhotoProps) {
   );
 }
 
-function ListRow({ imageUrl, username, onClickDelete }: AvatarColumnProps) {
+function ListRow({ imageUrl, username, onClickDelete }: AvatarRowProps) {
   return (
     <div>
       <div className={'relative'}>
@@ -60,4 +60,4 @@ function ListColumn({ imageUrl, username }: AvatarListProps) {
   );
 }
 
-export { ProfilePhoto, ListRow, ListColumn };
+export const Avatar = { ProfilePhoto, ListRow, ListColumn };
