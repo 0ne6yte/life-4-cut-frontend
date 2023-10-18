@@ -15,7 +15,7 @@ interface AvatarColumnProps extends AvatarListProps {
   onClickDelete: () => null;
 }
 
-function AvatarPhoto({ imageUrl, size = 'large' }: AvatarPhotoProps) {
+function ProfilePhoto({ imageUrl, size = 'large' }: AvatarPhotoProps) {
   const backgroundColor = generateVividColor();
 
   return (
@@ -37,11 +37,11 @@ function AvatarPhoto({ imageUrl, size = 'large' }: AvatarPhotoProps) {
   );
 }
 
-function AvatarRow({ imageUrl, username, onClickDelete }: AvatarColumnProps) {
+function ListRow({ imageUrl, username, onClickDelete }: AvatarColumnProps) {
   return (
     <div>
       <div className={'relative'}>
-        <AvatarPhoto imageUrl={imageUrl} />
+        <ProfilePhoto imageUrl={imageUrl} />
         <button type={'button'} onClick={onClickDelete} className={'absolute top-[-1px] right-[-1px]'}>
           <DeleteButton />
         </button>
@@ -51,13 +51,13 @@ function AvatarRow({ imageUrl, username, onClickDelete }: AvatarColumnProps) {
   );
 }
 
-function AvatarColumn({ imageUrl, username }: AvatarListProps) {
+function ListColumn({ imageUrl, username }: AvatarListProps) {
   return (
     <div className="text-center flex items-center text-[14px] font-medium gap-2.5">
-      <AvatarPhoto imageUrl={imageUrl} />
+      <ProfilePhoto imageUrl={imageUrl} />
       <p>{username}</p>
     </div>
   );
 }
 
-export default { AvatarPhoto, AvatarColumn, AvatarRow };
+export default { ProfilePhoto, ListRow, ListColumn };
