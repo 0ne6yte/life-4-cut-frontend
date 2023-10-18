@@ -60,4 +60,4 @@ function ListColumn({ imageUrl, username }: AvatarListProps) {
   );
 }
 
-export default { ProfilePhoto, ListRow, ListColumn };
+export { ProfilePhoto, ListRow, ListColumn };
