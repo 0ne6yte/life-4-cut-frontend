@@ -11,6 +11,7 @@ const config: StorybookConfig = {
       options: { postCss: { implementation: require.resolve('postcss') } },
     },
     '@storybook/addon-interactions',
+    '@storybook/addon-viewport',
   ],
   docs: {
     autodocs: 'tag',
