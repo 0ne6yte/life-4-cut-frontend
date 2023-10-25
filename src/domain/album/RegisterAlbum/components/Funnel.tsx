@@ -23,12 +23,14 @@ export function useFunnel(steps: readonly string[], options?: UseFormReturn<any>
     return <>{visibleStep}</>;
   }
 
-  function Step({ name, children, stepNum, onNext }: StepProps) {
+  function Step({ name, children, onNext }: StepProps) {
+    const stepIndex = steps.findIndex((stepName) => stepName === step);
+
     return (
       <div className={'flex flex-col h-full'}>
         <Header title={name} />
         <div className={'flex-1'}>{children}</div>
-        <BottomTab stepNum={stepNum} stepLength={steps.length} onNext={onNext} />
+        <BottomTab stepNum={stepIndex + 1} stepLength={steps.length} onNext={onNext} />
       </div>
     );
   }
