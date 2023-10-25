@@ -1,5 +1,6 @@
 import { type ReactElement, useState } from 'react';
 import { type UseFormReturn } from 'react-hook-form';
+import { useRoutes } from 'react-router-dom';
 
 import { BottomTab } from '@/domain/album/RegisterAlbum/components/layouts/BottomTab';
 import { Header } from '@/domain/album/RegisterAlbum/components/layouts/Header';
@@ -11,6 +12,7 @@ interface FunnelProps {
 interface StepProps {
   name: string;
   children: ReactElement;
+  stepNum: number;
   onNext: () => null;
 }
 export function useFunnel(steps: readonly string[], options?: UseFormReturn<any>['control']) {
@@ -21,12 +23,12 @@ export function useFunnel(steps: readonly string[], options?: UseFormReturn<any>
     return <>{visibleStep}</>;
   }
 
-  function Step({ name, children, onNext }: StepProps) {
+  function Step({ name, children, stepNum, onNext }: StepProps) {
     return (
       <div className={'flex flex-col h-full'}>
         <Header title={name} />
         <div className={'flex-1'}>{children}</div>
-        <BottomTab onNext={onNext} />
+        <BottomTab stepNum={stepNum} stepLength={steps.length} onNext={onNext} />
       </div>
     );
   }

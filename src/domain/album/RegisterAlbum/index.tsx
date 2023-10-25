@@ -6,15 +6,15 @@ import { MemberAddFunnel } from '@/domain/album/RegisterAlbum/components/funnels
 
 export default function RegisterAlbum() {
   const { control, handleSubmit } = useForm();
-  const [Funnel, setStep] = useFunnel(['새 앨범 등록', '앨범 편집', '앨범 등록 완료']);
+  const [Funnel, setStep] = useFunnel(['새 앨범 등록', '앨범 편집']);
   const handleSubmitForm = () => {};
   return (
     <form onSubmit={handleSubmit(handleSubmitForm)}>
       <Funnel>
-        <Funnel.Step name={'새 앨범 등록'} onNext={() => setStep('앨범 편집')}>
+        <Funnel.Step name={'새 앨범 등록'} stepNum={1} onNext={() => setStep('앨범 편집')}>
           <AlbumCreateFunnel control={control} />
         </Funnel.Step>
-        <Funnel.Step name={'앨범 편집'} onNext={() => setStep('앨범 등록 완료')}>
+        <Funnel.Step name={'앨범 편집'} stepNum={2} onNext={() => setStep('앨범 등록 완료')}>
           <MemberAddFunnel control={control} />
         </Funnel.Step>
       </Funnel>

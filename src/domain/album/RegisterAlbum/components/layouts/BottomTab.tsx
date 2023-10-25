@@ -1,14 +1,16 @@
 import { Button, Stepper } from '@/domain/_common/components';
 
 interface BottomTabProps {
-  onNext: () => null;
+  stepNum: number;
+  stepLength: number;
+  onNext: () => void;
 }
 
-export function BottomTab({ onNext }: BottomTabProps) {
+export function BottomTab({ stepNum, stepLength, onNext }: BottomTabProps) {
   return (
     <div className={'w-full'}>
       <div className={'w-fit mx-auto'}>
-        <Stepper stepLength={2} activeStep={1} />
+        <Stepper stepLength={stepLength} activeStep={stepNum} />
       </div>
       <div className={'flex gap-5'}>
         <Button variant={'contained'} color={'grey'}>
