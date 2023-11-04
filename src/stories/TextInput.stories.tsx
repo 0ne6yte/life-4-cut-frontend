@@ -51,7 +51,7 @@ export const Error: Story = {
     return (
       <form onSubmit={onSubmit}>
         <TextInput name="value1" label="Error" control={control} />
-        <Button variant="primary" onClick={onSubmit}>
+        <Button variant="contained" color="primary" onClick={onSubmit}>
           submit
         </Button>
       </form>

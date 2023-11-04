@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Bubble from '@/domain/_common/components/Bubble';
+import Bubble from '@/domain/_common/components/NoticeBubble';
 
 const meta = {
   title: 'Components/Bubble',

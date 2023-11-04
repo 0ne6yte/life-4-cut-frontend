@@ -1,31 +1,41 @@
 import React, { type ReactNode } from 'react';
 
-interface ButtonProps {
+export interface ButtonProps {
   disabled?: boolean;
-  variant: 'normal' | 'text' | 'primary' | 'large';
+  variant?: 'text' | 'contained';
+  color?: 'grey' | 'primary' | 'red';
   type?: 'button' | 'submit';
   onClick?: () => void;
   children?: ReactNode;
 }
 
 const buttonStyle = {
-  text: 'text-grey-buttontext active:bg-grey-background disabled:text-grey-whitegray disabled:bg-opacity-0',
-  normal:
-    'text-grey-buttontext bg-grey-background active:bg-grey-placeholder disabled:text-grey-whitegray disabled:bg-grey-background',
-  primary: 'text-white bg-primary-default active:bg-primary-touch disabled:bg-primary-disabled',
-  large: 'text-white bg-red-default w-full min-w-[336px] h-11 active:bg-red-touch disabled:bg-red-disabled',
+  grey: {
+    text: 'text-grey-buttontext active:bg-grey-buttontext active:bg-opacity-10 disabled:text-grey-placeholder disabled:bg-transparent',
+    contained:
+      'text-grey-buttontext bg-grey-background active:bg-grey-placeholder disabled:text-grey-placeholder disabled:bg-grey-whitegray',
+  },
+  primary: {
+    text: 'text-primary-default active:bg-primary-default active:bg-opacity-10 disabled:text-primary-disabled disabled:bg-transparent',
+    contained: 'text-white bg-primary-default active:bg-primary-touch disabled:bg-primary-disabled',
+  },
+  red: {
+    text: 'text-red-default active:bg-red-default active:bg-opacity-10 disabled:text-red-disabled disabled:bg-transparent',
+    contained: 'text-white bg-red-default active:bg-red-touch disabled:bg-red-disabled',
+  },
 };
 
 export function Button({
-  variant,
   disabled = false,
+  variant = 'text',
+  color = 'grey',
   onClick,
   children,
   type = 'submit',
 }: React.PropsWithChildren<ButtonProps>) {
   return (
     <button
-      className={`border-none rounded-lg text-sm font-bold w-40 h-11 ${buttonStyle[variant]}`}
+      className={`border-none rounded-lg text-sm font-bold flex-1 p-[13px] ${buttonStyle[color][variant]}`}
       disabled={disabled}
       type={type}
       onClick={onClick}
