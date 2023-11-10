@@ -1,6 +1,6 @@
-import { type UseFormReturn } from 'react-hook-form';
+import { type Control, type FieldValues, type UseFormReturn } from 'react-hook-form';
 
 export interface FunnelProps {
-  control: UseFormReturn<any>['control'];
+  control: Control<any, any>;
   onNext?: () => void;
 }
