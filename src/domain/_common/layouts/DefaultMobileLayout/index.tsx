@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 export default function DefaultMobileLayout() {
   return (
-    <main className={'h-screen bg-white'}>
+    <main className={'flex flex-col h-screen bg-white min-h-screen'}>
       <Outlet />
     </main>
   );
