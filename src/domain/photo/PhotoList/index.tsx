@@ -27,7 +27,9 @@ export default function PhotoList() {
       }
       content={
         <AlbumPages>
-          <AlbumPages.ThinVertical />
+          {/* <AlbumPages.ThinVertical /> */}
+          {/* <AlbumPages.FatVertical /> */}
+          <AlbumPages.FatHorizontal />
         </AlbumPages>
       }
       showFooter
