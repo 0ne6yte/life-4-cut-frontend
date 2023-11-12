@@ -50,7 +50,7 @@ function DropdownWrapper({ children }: DropdownProps) {
 
   return (
     <DropdownContext.Provider value={{ open, setOpen }}>
-      <div ref={dropdownRef} className="inline-block">
+      <div ref={dropdownRef} className="inline-block relative z-10">
         {children}
       </div>
     </DropdownContext.Provider>
@@ -82,7 +82,7 @@ function DropdownList({ children, className = '' }: DropdownListProps) {
   return (
     open && (
       <ul
-        className={`w-[164px] mt-3 rounded-[12px] border border-grey-background shadow-md bg-white overflow-hidden  divide-y-[1px] divide-grey-background ${className}`}
+        className={`w-[164px] absolute top-[12px] right-0 mt-3 rounded-[12px] border border-grey-background shadow-md bg-white overflow-hidden  divide-y-[1px] divide-grey-background ${className}`}
       >
         {children}
       </ul>
