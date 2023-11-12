@@ -2,6 +2,7 @@ import { ReactComponent as ShareIcon } from '@/assets/share.svg';
 import { ReactComponent as VerticalEllipsis } from '@/assets/vertical-ellipsis.svg';
 import { Avatar, Dropdown } from '@/domain/_common/components';
 import MainTemplate from '@/domain/_common/layouts/MainTemplate';
+import { AlbumPages } from '@/domain/photo/PhotoList/components/AlbumInsidePages';
 
 export default function PhotoList() {
   return (
@@ -24,7 +25,11 @@ export default function PhotoList() {
           </Dropdown>
         </div>
       }
-      content={'hi'}
+      content={
+        <AlbumPages>
+          <AlbumPages.ThinVertical />
+        </AlbumPages>
+      }
       showFooter
     />
   );
