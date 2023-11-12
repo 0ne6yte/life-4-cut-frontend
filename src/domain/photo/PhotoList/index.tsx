@@ -1,3 +1,5 @@
+import MainTemplate from '@/domain/_common/layouts/MainTemplate';
+
 export default function PhotoList() {
-  return <h1>PhotoList 페이지</h1>;
+  return <MainTemplate title="사진목록" content={'hi'} showFooter />;
 }
