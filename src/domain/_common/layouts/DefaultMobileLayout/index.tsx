@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 export default function DefaultMobileLayout() {
   return (
-    <main className={'h-screen bg-white'}>
+    <main className={'bg-white relative'}>
       <Outlet />
     </main>
   );
