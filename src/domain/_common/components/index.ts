@@ -10,3 +10,4 @@ export * from './Dropdown';
 export * from './Tab';
 export * from './Filter';
 export * from './BottomTab';
+export * from './Header';
