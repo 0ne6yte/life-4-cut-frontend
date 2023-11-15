@@ -78,11 +78,12 @@ function TabItem({ icon, text, onClick, index }: TabItemProps) {
 interface TabPannelProps {
   index: number;
   children: ReactNode;
+  className?: string;
 }
 
-function TabPannel({ index, children }: TabPannelProps) {
+function TabPannel({ index, children, className }: TabPannelProps) {
   const { selected } = useTabContext();
-  return selected === index && <div>{children}</div>;
+  return selected === index && <div className={className}>{children}</div>;
 }
 
 export const Tab = Object.assign(TabGroup, {
