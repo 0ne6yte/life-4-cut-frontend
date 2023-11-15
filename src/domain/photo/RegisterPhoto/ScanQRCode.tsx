@@ -1,51 +1,37 @@
-import { Html5Qrcode } from 'html5-qrcode';
+import { Html5QrcodeScanner } from 'html5-qrcode';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function ScanQRCode() {
-  const previewRef = useRef<HTMLDivElement>(null);
+  const [scanResult, setScanResult] = useState('');
 
   useEffect(() => {
-    const html5QrCode = new Html5Qrcode('reader');
-    const config = { fps: 10, qrbox: { width: 250, height: 250 }, facingMode: 'environment' };
+    const scanner = new Html5QrcodeScanner(
+      'reader',
+      {
+        qrbox: {
+          width: 250,
+          height: 250,
+        },
+        fps: 5,
+      },
+      false
+    );
 
-    const qrCodeSuccessCallback = (decodedText: any, decodedResult: any) => {
-      html5QrCode.clear();
-      const decodedTextString = String(decodedText);
-      console.log(decodedTextString, decodedResult);
-    };
+    const qrSuccessCallback = (decodedText: any, decodedResult: any) => {
+      setScanResult(String(decodedText));
 
-    const qrCodeErrorCallback = (err: any) => {
-      html5QrCode.clear();
-      console.log(err);
-    };
-
-    if (!previewRef.current) {
-      return;
-    }
-
-    const didStart = html5QrCode
-      .start({ facingMode: 'environment' }, config, qrCodeSuccessCallback, qrCodeErrorCallback)
-      .catch((err) => {
+      scanner.clear().catch((err) => {
         console.log(err);
       });
-
-    return () => {
-      didStart
-        .then(() => {
-          html5QrCode.stop().catch((err) => {
-            console.log(err);
-          });
-        })
-        .catch(() => {
-          console.log('Error stopping scanner');
-        });
     };
-  }, [previewRef]);
+
+    const qrFailCallback = () => {};
+
+    scanner.render(qrSuccessCallback, qrFailCallback);
+  }, []);
 
   return (
-    <div className="w-[4/5]">
-      <div id="reader" ref={previewRef}></div>
-    </div>
+    <>{scanResult ? <h1>주소 이름은 {scanResult}입니다.</h1> : <div id="reader" className="w-full h-[250px]"></div>}</>
   );
 }
