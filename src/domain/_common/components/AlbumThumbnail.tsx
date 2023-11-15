@@ -23,9 +23,9 @@ export default function AlbumThumbnail({ albumName, memberNum, imageUrl = '' }: 
           <p className={'h-full text-white text-[8px] leading-5 font-bold ml-2'}>{memberNum}명</p>
         </div>
       </div>
-      <div className={'flex bg-black-40 h-[37px] items-center text-center'}>
+      <div className={'relative flex bg-black-40 h-[37px] items-center text-center'}>
         <p className={'flex-1 text-[13px] leading-3 text-white font-bold'}>{albumName}</p>
-        <button className={'absolute right-3'} type={'button'} onClick={handleButtonClick}>
+        <button className={'absolute right-3 stroke-white'} type={'button'} onClick={handleButtonClick}>
           <VerticalEllipsis />
         </button>
       </div>
