@@ -4,6 +4,9 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      heights: {
+        'small-h-screen': '100svh',
+      },
       colors: {
         black: {
           DEFAULT: '#000000',

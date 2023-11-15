@@ -5,7 +5,7 @@ import { FloatingButton } from '.';
 
 export function BottomTab() {
   return (
-    <nav role="tab" className="px-[27px] py-[7px]">
+    <nav role="tab" className="px-[27px] py-[7px] h-[53px]">
       <ul className="flex items-center justify-around fill-grey-placeholder">
         <li>
           <Picture />
