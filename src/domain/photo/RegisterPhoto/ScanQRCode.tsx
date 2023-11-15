@@ -3,7 +3,23 @@ import { Html5QrcodeScanner } from 'html5-qrcode';
 import { useEffect, useState } from 'react';
 
 export default function ScanQRCode() {
-  const [scanResult, setScanResult] = useState('');
+  const [scanResultUrl, setscanResultUrl] = useState('');
+
+  const isImgUrl = async (url: string) => {
+    console.log(url);
+
+    const img = new Image();
+    img.src = `${url}.png`;
+
+    return await new Promise((resolve) => {
+      img.onerror = () => {
+        resolve(false);
+      };
+      img.onload = () => {
+        resolve(true);
+      };
+    });
+  };
 
   useEffect(() => {
     const scanner = new Html5QrcodeScanner(
@@ -19,7 +35,7 @@ export default function ScanQRCode() {
     );
 
     const qrSuccessCallback = (decodedText: any, decodedResult: any) => {
-      setScanResult(String(decodedText));
+      setscanResultUrl(String(decodedText));
 
       scanner.clear().catch((err) => {
         console.log(err);
@@ -29,9 +45,29 @@ export default function ScanQRCode() {
     const qrFailCallback = () => {};
 
     scanner.render(qrSuccessCallback, qrFailCallback);
+
+    return () => {
+      scanner.clear().catch((error) => {
+        console.error('Failed to clear html5QrcodeScanner. ', error);
+      });
+    };
   }, []);
 
+  useEffect(() => {
+    if (scanResultUrl) {
+      isImgUrl(scanResultUrl)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }
+  }, [scanResultUrl]);
+
   return (
-    <>{scanResult ? <h1>주소 이름은 {scanResult}입니다.</h1> : <div id="reader" className="w-full h-[250px]"></div>}</>
+    <>
+      <div id="reader" className="w-full h-[250px]"></div>
+    </>
   );
 }

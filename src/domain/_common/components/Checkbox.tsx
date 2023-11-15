@@ -40,7 +40,7 @@ export function Checkbox({ type, control }: CheckboxProps) {
 
         return (
           <button
-            className={`w-[336px] h-[101px] border-2 rounded-xl flex justify-start items-center font-bold text-[24px] p-3 ${
+            className={`w-full h-[101px] border-2 rounded-xl flex justify-start items-center font-bold text-[24px] p-3 ${
               isSelected
                 ? 'text-white bg-primary-default border-primary-default'
                 : 'text-grey-placeholder border-grey-placeholder'

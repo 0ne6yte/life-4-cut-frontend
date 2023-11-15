@@ -3,6 +3,7 @@ import React from 'react';
 interface StepperProps {
   stepLength: number;
   activeStep: number;
+  classProps?: number;
 }
 
 const indicatorStyle = {
@@ -11,7 +12,7 @@ const indicatorStyle = {
   next: 'bg-white border border-grey-placeholder text-grey-placeholder',
 };
 
-export function Stepper({ stepLength, activeStep }: StepperProps) {
+export function Stepper({ stepLength, activeStep, classProps }: StepperProps) {
   const getIndicatorStyle = (step: number) => {
     if (step < activeStep) {
       return indicatorStyle.previous;

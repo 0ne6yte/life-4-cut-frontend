@@ -21,8 +21,7 @@ export default function RegisterPhoto() {
   ];
 
   return (
-    <div className="h-full flex flex-col">
-      RegisterPhoto 페이지
+    <div className="small-h-screen flex flex-col">
       <div className="p-10 bg-black-80 rounded-tl-[30px] rounded-tr-[30px] flex-1 flex flex-col items-center gap-5 w-full">
         <h1 className="text-white font-bold text-[24px]">QR 코드를 스캔하세여</h1>
         <Tab.Group initialIndex={1}>

@@ -17,9 +17,9 @@ export function TextInput({ name, label, control, useCheckmark = false, ...props
       name={name}
       control={control}
       render={({ field, fieldState: { error, invalid, isDirty } }) => (
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
           <div
-            className={`p-[12px] border-grey-placeholder border-[1px] border-solid rounded-[12px] w-full min-w-[336px] flex items-center bg-white ${
+            className={`p-[12px] border-grey-placeholder border-[1px] border-solid rounded-[12px] w-full flex items-center bg-white ${
               error ? 'border-red-default' : ''
             }`}
           >
