@@ -1,12 +1,12 @@
 # Life 4 Cut FE
 
-## 사이트 URL: https://life-4-cut.netlify.app/
+### 사이트 URL: https://life-4-cut.netlify.app/
 
-## Run & Build
+### Run & Build
 
 | description           | command        | port |
-| --------------------- | -------------- | ---- |
-| 개발모드 실행         | `yarn dev`     | 5173 |
+| --------------------- | -------------- |------|
+| 개발모드 실행         | `yarn dev`     | 8080  |
 | 프로덕션 빌드 preview | `yarn preview` | 4173 |
 | 빌드                  | `yarn build`   |      |
 
@@ -19,7 +19,12 @@
 | 스토리북 실행 | `yarn storybook`       | 6006 |
 | 스토리북 빌드 | `yarn build-storybook` |      |
 
-## 디렉토리 구조
+### tswagger
+api fetch를 위한 코드를 백엔드 swagger API 문서 기반으로 생성합니다.
+```bash
+yarn tswagger
+```
+### 디렉토리 구조
 
 ```text
 📦src

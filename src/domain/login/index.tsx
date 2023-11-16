@@ -1,8 +1,11 @@
+import { useUserNicknameQuery } from '@/apis/queries/useUserNicknameQuery';
 import { ReactComponent as KakaoIcon } from '@/assets/kakao.svg';
 import { ReactComponent as NaverIcon } from '@/assets/naver.svg';
 import AuthLoginButton from '@/domain/login/components/AuthLoginButton';
 
 export default function Login() {
+  const { data } = useUserNicknameQuery({ nickname: 'test' });
+  console.log(data);
   return (
     <main className="bg-white flex flex-col justify-center items-center">
       <div className="text-[64px] mb-[120px] font-extrabold">LOGO</div>
