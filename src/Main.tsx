@@ -24,8 +24,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
             },
           },
           queryCache: new QueryCache({
-            onError: (error) => {
-              alert(error.response.data.message);
+            onError: (error: any) => {
+              alert(error?.response?.data.message);
             },
           }),
         })
