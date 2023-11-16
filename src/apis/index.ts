@@ -7,4 +7,4 @@ const instance = axios.create({
   timeout: 30000,
 });
 
-export const api = apiGenerator(instance);
+export const api = apiGenerator(instance).api.v1;

@@ -9,7 +9,7 @@ export function useUserNicknameQuery({ nickname }: useUserNicknameQueryParams) {
   const { data } = useQuery(
     ['userNicknameInfo'],
     async () => {
-      const { data } = await api.api.v1.users.get(nickname);
+      const { data } = await api.users.get(nickname);
       return data;
     },
     {
