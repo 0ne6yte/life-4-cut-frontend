@@ -14,8 +14,8 @@ const badgeStyle = {
 
 export function Badge({ onClick, text, variant = 'default' }: BadgeProps) {
   return (
-    <div onClick={onClick} className={`p-[8px] flex items-center ${badgeStyle[variant]} gap-[4px]`}>
-      {variant === 'info' && <UserIcon />}
+    <div onClick={onClick} className={`p-[8px] flex items-center ${badgeStyle[variant]} gap-[4px] fill-white`}>
+      {variant === 'info' && <UserIcon fill="white" />}
       <span className="text-[9px] font-bold select-none">{text}</span>
     </div>
   );

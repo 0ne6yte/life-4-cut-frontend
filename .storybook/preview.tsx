@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { withThemeByDataAttribute } from '@storybook/addon-styling';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 import { ModalProvider } from '../src/contexts/ModalProvider';
 import '../src/global.css';
@@ -20,3 +21,9 @@ export const decorators = [
     attributeName: 'data-mode',
   }),
 ];
+
+export const parameters = {
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+  },
+};

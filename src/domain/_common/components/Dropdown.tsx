@@ -26,9 +26,10 @@ function useDropdown() {
 
 interface DropdownProps {
   children: ReactNode;
+  className?: string;
 }
 
-function DropdownWrapper({ children }: DropdownProps) {
+function DropdownWrapper({ children, className = '' }: DropdownProps) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -50,7 +51,7 @@ function DropdownWrapper({ children }: DropdownProps) {
 
   return (
     <DropdownContext.Provider value={{ open, setOpen }}>
-      <div ref={dropdownRef} className="inline-block">
+      <div ref={dropdownRef} className={`inline-block z-10 ${className}`}>
         {children}
       </div>
     </DropdownContext.Provider>
@@ -59,16 +60,21 @@ function DropdownWrapper({ children }: DropdownProps) {
 
 interface DropdownTriggerProps {
   children?: ReactNode;
+  className?: string;
 }
 
-function DropdownTrigger({ children }: DropdownTriggerProps) {
+function DropdownTrigger({ children, className = '' }: DropdownTriggerProps) {
   const { open, setOpen } = useDropdown();
 
   const handleTriggerClick = () => {
     setOpen(!open);
   };
 
-  return <div onClick={handleTriggerClick}>{children}</div>;
+  return (
+    <div onClick={handleTriggerClick} className={`${className}`}>
+      {children}
+    </div>
+  );
 }
 
 interface DropdownListProps {
@@ -82,7 +88,7 @@ function DropdownList({ children, className = '' }: DropdownListProps) {
   return (
     open && (
       <ul
-        className={`w-[164px] mt-3 rounded-[12px] border border-grey-background shadow-md bg-white overflow-hidden  divide-y-[1px] divide-grey-background ${className}`}
+        className={`w-[164px] absolute top-[12px] right-0 mt-3 rounded-[12px] border border-grey-background shadow-md bg-white overflow-hidden  divide-y-[1px] divide-grey-background ${className}`}
       >
         {children}
       </ul>
