@@ -80,6 +80,9 @@
       "eslint --cache --fix"
     ]
   },
+  "resolutions": {
+    "jackspeak": "2.1.1"
+  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
